@@ -42,7 +42,7 @@ export class RecordFinderComponent implements OnInit {
       this.LinkedIn = this.LinkedIn || false
 
     
-     this.Requrl = 'http://localhost:51595/api/values?email='+this.email+'&Twiter='+this.Twiter+'&Facebook='+this.Facebook+'&Gmail='+this.Gmail+'&LinkedIn='+this.LinkedIn+''
+     this.Requrl = 'http://zubair96-001-site1.etempurl.com/api/Values?email='+this.email+'&Twiter='+this.Twiter+'&Facebook='+this.Facebook+'&Gmail='+this.Gmail+'&LinkedIn='+this.LinkedIn+''
      this.http.get<any>(this.Requrl).subscribe(data => {
         this.information = {UserName : data.UserName,Available : data.Available,EmailAdress:data.EmailAdress,CountMatchedAccount : data.CountMatchedAccount,MatchedAccounts:data.MatchedAccounts,Total_CheckedAccounts:data.Total_CheckedAccounts,Results_Percentage:data.Results_Percentage,Remarks:data.Remarks} 
       debugger  
